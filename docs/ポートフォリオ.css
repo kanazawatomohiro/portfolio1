@@ -1,0 +1,444 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebfdff;
+}
+
+.grovalNavigation {
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-left: 30px; /* 右に少しずらす */
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+img {
+    height: auto;
+}
+
+.small-text {
+    font-size: 14px;
+    margin: 0;
+}
+
+.large-text {
+    font-size: 24px;
+    margin: 0;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.content {
+    flex: 1;
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center; /* 画像と文章を中央に配置 */
+    margin-left: 10px;
+    height:auto;
+    flex-direction: column;
+    border: 1px solid #000; /* 1ピクセル幅の実線の枠線を黒色で設定 */
+    padding: 10px; /* コンテンツと枠線の間に余白を追加 */
+}
+
+.localNavigation {
+    width: 300px; /* デフォルトの幅 */
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    flex-direction: column; /* 縦方向に配置 */
+}
+
+/* ウィンドウ幅が特定の幅以下の場合に .localNavigation を縮小 */
+@media (max-width: 768px) {
+    .localNavigation {
+        width: 150px; /* ウィンドウが縮小された場合の幅 */
+    }
+}
+
+.container {
+  height: 100%; /* 親要素の高さを100%に設定 */
+  overflow: hidden; /* スクロールを無効にする */
+  background-color: #eee; /* 背景色を設定 */
+}
+
+/* カーソルを合わせたときに表示を変える */
+p.hover-sample:hover{
+	color: #FF0000;
+	font-size: 20px;
+	font-weight: bold;
+}
+.button_h8{
+    text-decoration: none;
+    color: #545454;
+    display: inline-block;
+    padding: 1em 2em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .button_h8:after {
+    position: absolute;
+    transition: 0.4s;
+    content: "";
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    background: #ffffff;
+  }
+  .button_h8:hover {
+    box-shadow: inset 0px 0px 0px 3px #7f7e7e;
+    text-decoration: none;
+  }
+  .overlay-text {
+    position: absolute;
+    top: 588px; /* 上からの位置を指定（px単位を使用） */
+    left: 330px; /* 左からの位置を指定（px単位を使用） */
+    background: rgba(0, 0, 0, 0.7); /* テキストの背景色 */
+    color: #ffffff; /* テキストの色 */
+    padding: 10px; /* 上下の余白 */
+    font-family: "VDL ロゴJrブラック", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 80px;
+    width: 1150px; /* 要素の横幅を自動調整 */
+}
+/*トップページ*/
+/* 自己紹介 */
+
+/* カード全体 */
+.writer-profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 2px dashed #d5d4d4;
+}
+/* カードの右・左共通 */
+.wp-left, .wp-right {
+  padding: 25px 20px;
+}
+/* カードの左側 */
+.wp-left {
+  width: 35%;
+  border-right: 2px dashed #eee;
+  text-align: center;
+}
+/* カードの右側 */
+.wp-right {
+  width: 65%;
+}
+
+/* 左側 */
+
+/* 吹き出し */
+.wp-label {
+  position: relative;
+  margin: 0 0 15px;
+  padding: 10px 15px;
+  border: 1px solid #222;
+  display: inline-block;
+  min-width: 120px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+/* 三角 */
+.wp-label::before,
+.wp-label::after {
+  content: '';
+  border: 14px solid transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -14px;
+}
+/* 線 */
+.wp-label::before {
+  border-top-color: #222;
+  bottom: -28px;
+}
+/* 地 */
+.wp-label::after {
+  border-top-color: #fff;
+  bottom: -27px;
+}
+/* 吹き出し内のテキスト */
+.wp-label p {
+  color: #222;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* 画像 */
+.wp-img {
+  width: 250px; /* 画像の幅を調整 */
+  height: 200px; /* 画像の高さを調整 */
+  margin: 10px auto;
+}
+/* 画像を丸く、枠線をつける */
+.wp-img img {
+  border-radius: 20%;
+  border: 2px solid #eee;
+}
+/* 名前 */
+.wp-name {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+
+/* 右側 */
+
+/* リストを左揃え・中央寄せに */
+.ul-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+/* 最後の要素にだけ下に余白をつけない */
+.ul-center ul li:not(:last-child) {
+  padding-bottom: 3px;
+}
+
+/* リストの文字色 */
+.ul-center ul .li-point {
+color: #141313;
+font-size: 20px;
+font-weight: 400;
+line-height: 1.7;
+list-style-type: none; /* デフォルトのリストスタイルを非表示 */
+position: relative; /* 相対位置を設定 */
+padding-left: 20px; /* 点の左側の余白を設定 */
+}
+
+/* カスタムの点 */
+.ul-center ul .li-point::before {
+content: "•"; /* カスタムの点を追加 */
+color: #7b7b7b; /* 点の色を設定 */
+position: absolute; /* 点の位置を設定 */
+left: 100px; /* 点を最初の文字の左隣に配置 */
+top: 0;
+}
+/* リストの文字色 */
+.-center ul .li-point {
+  color: #7b7b7b;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+
+/* 文章を左揃え・中央寄せに */
+.wp-content {
+  text-align: center;
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  /* カードを縦並びに */
+  .writer-profile-card {
+    display: block;
+  }
+  /* 左右の幅を100%に */
+  .wp-left, .wp-right {
+    width: 100%;
+    padding: 35px 20px;
+  }
+  /* 点線を左から下に */
+  .wp-left {
+    border-right: none;
+    border-bottom: 2px dashed #eee;
+  }
+}
+.li-point p {
+  margin: 5px 0; /* 上下に余白を設定（お好みの値に調整） */
+}
+.image-center {
+display: flex;
+align-items: center; /* 画像とテキストを縦方向に中央に配置 */
+align-items: center; /* 垂直方向に中央に配置 */
+}
+
+.image-center img {
+width: 140px;
+height: auto;
+margin-left: 30px;
+}
+
+.image-center p {
+font-size: 27px;
+font-weight: 800;
+line-height: 1.7;
+margin-left: 10px; /* 画像とテキストの間隔を設定 */
+font-family: "VDL ロゴJrブラック", sans-serif;
+}
+
+.text-container p {
+margin: 5px 0; /* 上下に余白を設定（お好みの値に調整） */
+}
+/* カスタムリストのスタイル */
+.custom-list li {
+  list-style-type: none; /* 点を非表示にする */
+}
+.image-with-text {
+  display: flex; /* 画像とテキストを横に配置 */
+  align-items: center; /* 画像とテキストを縦方向に中央に配置 */
+  font-weight: 600;
+}
+
+.image-with-text img {
+  width: 60px; /* 画像の幅を調整 */
+  height: auto; /* 画像の高さを自動調整 */
+  margin-right: 10px; /* 画像とテキストの間隔を設定 */
+  padding-bottom: 10px;
+}
+
+.image-with-text p {
+  margin: 0; /* テキストの上下の余白を削除 */
+  font-size: 16px; /* テキストのフォントサイズを設定 */
+  position: relative;
+}
+
+/* 星アイコンを追加 */
+.image-with-text p::after {
+  content: ' ★★★★☆'; /* ☆の数を調整 */
+  color: orange; /* 星の色を設定 */
+  font-size: 24px;
+}
+
+/* 星アイコンを追加 */
+.image-with-text p1::after {
+  content: ' ★★★☆☆'; /* ☆の数を調整 */
+  color: orange; /* 星の色を設定 */
+  font-size: 20px;
+}
+
+/* 最後の画像の右側に余分なスペースが表示されないようにする */
+.image-with-text:last-child img {
+  margin-right: 0; /* 最後の画像の右側のマージンを0に設定 */
+}
+
+.image-with-text text {
+  margin: 0; /* テキストの上下の余白を削除 */
+  font-size: 16px; /* テキストのフォントサイズを設定 */
+  position: relative;
+  margin-left: 5px;
+}
+/*プロフィール*/
+.text-container {
+  font-size: 16px; /* フォントサイズを調整 */
+  font-family: Arial, sans-serif; /* フォントファミリーを指定 */
+  line-height: 1.5; /* 行の高さを調整 */
+  margin-top: 10px; /* 上部の余白を追加 */
+  margin-left: 10px;
+  text-align: left; /* テキストを左揃えにする */
+}
+
+
+.text-container p {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px; /* 大項目と文の間に余白を追加 */
+}
+
+
+/*==================================================
+アコーディオンのためのcss
+===================================*/
+
+/*アコーディオン全体*/
+.accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin:0 auto;
+}
+
+.accordion-area li{
+    margin: 10px 0;
+}
+
+.accordion-area section {
+  border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size:1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+    
+}
+.title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+.title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+  transform: rotate(45deg);
+}
+
+.title.close::after{
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+    display: none;/*はじめは非表示*/
+    background: #f3f3f3;
+  margin:0 3% 3% 3%;
+    padding: 3%;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+h2{
+    text-align: center;
+    margin: 30px 0;
+    font-size:1rem;
+}
